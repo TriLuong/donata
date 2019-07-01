@@ -20,7 +20,7 @@ export default {
     }
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
     .homePage {
         padding: 0 !important;
         position: relative;

@@ -2,19 +2,22 @@
   <div id="app">
     <Home />
     <Event />
+    <Collection />
   </div>
 </template>
 
 <script>
 import Home from "./layouts/Home"
 import Event from "./layouts/Event"
+import Collection from "./layouts/Collection"
 
 export default {
   name: 'app',
   components: {
     Home,
-    Event
-  }
+    Event,
+    Collection
+  },
 }
 </script>
 
