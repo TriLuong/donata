@@ -1,22 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Home />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from "./components/NavBar"
+import Home from "./layouts/Home"
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Home
   }
 }
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
+  font-family: "Lato";
+}
 @font-face {
   font-family: "Lato";
   src: url("./assets/00-Fonts/Lato/Lato-Regular.ttf");
@@ -28,6 +32,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
