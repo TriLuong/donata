@@ -40,6 +40,7 @@ export default {
                 width: 100%;
                 min-height: 600px;
                 height: 100vh;
+                transform: scaleX(-1);
             };
         };
         .infoColl {
@@ -61,6 +62,7 @@ export default {
                 .eventDetail{
                     position: absolute;
                     font-family: "Lato";
+                    font-weight: bold;
                     bottom:1rem;
                     left:0;
                     right:0;
