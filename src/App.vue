@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <Home />
+    <Event />
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar"
 import Home from "./layouts/Home"
+import Event from "./layouts/Event"
 
 export default {
   name: 'app',
   components: {
-    Home
+    Home,
+    Event
   }
 }
 </script>

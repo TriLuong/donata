@@ -65,6 +65,9 @@ export default {
                 line-height: 1.5;
                 letter-spacing: 1px;
                 color:black;
+                &:hover {
+                    color: red;
+                }
             }
         }
     }
