@@ -17,6 +17,11 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Lato";
+  src: url("./assets/00-Fonts/Lato/Lato-Regular.ttf");
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
