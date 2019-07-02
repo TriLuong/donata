@@ -4,6 +4,7 @@
     <Event />
     <Collection />
     <Public />
+    <Footer />
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import Home from "./layouts/Home"
 import Event from "./layouts/Event"
 import Collection from "./layouts/Collection"
 import Public from "./layouts/Public"
+import Footer from "./layouts/Footer"
 
 export default {
   name: 'app',
@@ -19,7 +21,8 @@ export default {
     Home,
     Event,
     Collection,
-    Public
+    Public,
+    Footer
   },
 }
 </script>
