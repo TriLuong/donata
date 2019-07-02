@@ -16,10 +16,10 @@
                             <p>{{this.items[count].time}}</p>
                         </div>
                     </div>
-                    <div class="col-md-4 publicRightCarousel">
+                    <div class="col-md-4 publicRightCarousel" v-on:click="nextContent">
                         <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[nextCount].url)"/>
                         <div class="changePage">
-                            <a v-on:click="nextContent">&gt;</a>
+                            <a>&gt;</a>
                         </div>
                     </div> 
                 </div>
@@ -78,7 +78,6 @@ export default {
         padding: 5rem 0 5rem 5rem;
         height: 100vh;
         min-height: 600px;
-        overflow-y: hidden;
         .publicLeft {
             padding-right: 15rem;
             text-align: left;
@@ -103,6 +102,7 @@ export default {
             }
         }
         .publicRight {
+            padding:0;
             padding-left: 2rem;
             img {
                 width: 100%;
@@ -111,7 +111,7 @@ export default {
                 min-height: 400px;
             }
             .publicRightContent{
-                padding:0;
+                padding:0 1rem;
                 img {
                     position: relative;
                     width: 100%;
@@ -132,6 +132,7 @@ export default {
             }
             .publicRightCarousel {
                 color: white;
+                padding: 0;
                 img{
                     position: relative;
                 }   
@@ -142,14 +143,17 @@ export default {
                     bottom:0;
                     left:0;
                     right: 0;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: black;
+                        opacity: 0.6;
+                    }
                     a {
                         font-size: 50px;
                         text-decoration: none;
-                        cursor: pointer;
-                        color: blue;
-                        &:hover {
-                            color: red;
-                        }
+                        color: white;
+                        position: absolute;
+                        transform: translateY(10rem);
                     }
                 }
             }

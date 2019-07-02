@@ -28,10 +28,13 @@ export default {
 *{
   box-sizing: border-box;
   font-family: "Lato";
-  margin: 0;
-  padding:0;
-  overflow-x: hidden;
+  margin: 0 ;
+  padding: 0;
 }
+.row {
+  margin: 0 !important;
+}
+
 @font-face {
   font-family: "Lato";
   src: url("./assets/00-Fonts/Lato/Lato-Regular.ttf");

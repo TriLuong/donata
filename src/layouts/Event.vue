@@ -1,5 +1,7 @@
 <template>
-    <EventFirst />
+    <div class="container-fluid event">
+        <EventFirst />
+    </div>
 </template>
 
 <script>
@@ -12,6 +14,8 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-    
+    .event {
+        padding:0;
+    }
 </style>
 

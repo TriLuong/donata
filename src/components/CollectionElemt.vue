@@ -1,9 +1,7 @@
 <template>
     <div class="container-fluid collectionElemt">
         <div class="row bgColl">
-            <div class="col-md-12">
-                <img v-bind:src="require('../assets/02-Lifestyle-photos/' + collection.url)" />
-            </div>
+            <img v-bind:src="require('../assets/02-Lifestyle-photos/' + collection.url)" />
         </div>
         <div class="row infoColl">
             <div class="col-md-7 col-xs-12 infoCollLeft">

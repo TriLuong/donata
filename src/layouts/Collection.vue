@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container-fluid collection">
         <CollectionElemt v-for="collection in collections" v-bind:key="collection.id" v-bind:collection="collection"/>
     </div>
 </template>
@@ -37,3 +37,9 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+ .collection{
+   padding:0;
+ }
+</style>
