@@ -3,6 +3,7 @@
     <Home />
     <Event />
     <Collection />
+    <Public />
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import Home from "./layouts/Home"
 import Event from "./layouts/Event"
 import Collection from "./layouts/Collection"
+import Public from "./layouts/Public"
 
 export default {
   name: 'app',
   components: {
     Home,
     Event,
-    Collection
+    Collection,
+    Public
   },
 }
 </script>
@@ -25,6 +28,9 @@ export default {
 *{
   box-sizing: border-box;
   font-family: "Lato";
+  margin: 0;
+  padding:0;
+  overflow-x: hidden;
 }
 @font-face {
   font-family: "Lato";
