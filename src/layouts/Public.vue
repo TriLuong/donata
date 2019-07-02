@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 publicRightCarousel">
-                        <img src="../assets/02-Lifestyle-photos/Donata_13Mar197829.jpg"/>
+                        <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[nextCount].url)"/>
                         <div class="changePage">
                             <a v-on:click="nextContent">&gt;</a>
                         </div>
@@ -34,6 +34,7 @@ export default {
     data() {
         return {
             count: 0,
+            nextCount:1,
             items: [
                 {
                     id: 1,
@@ -59,9 +60,13 @@ export default {
     methods: {
         nextContent: function() {
             this.count +=1;
+            this.nextCount += 1;
             console.log("Publication count",this.count);
             if(this.count > this.items.length - 1){
                 this.count = 0;
+            }
+            if(this.nextCount > this.items.length - 1){
+                this.nextCount = 0;
             }
         }
     }
