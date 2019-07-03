@@ -38,18 +38,16 @@ export default {
 </script>
 <style lang="scss" scoped>
     .event{
-        height: 100vh;
-        padding: 0 !important;
-        min-height: 600px;
+        padding:0;
         .left{
             padding: 0;
             background-color: black;
             h1{
                 color: gray;
-                font-size: 150px;
+                font-size: 100px;
                 font-family: "Lato";
                 font-weight: bold;
-                transform: translateY(25rem) rotate(-90deg);
+                transform: translateY(280px) rotate(-90deg);
             }
         }
         .right{
@@ -57,12 +55,15 @@ export default {
             position: relative;
             img {
                 width: 100%;
+                object-fit: cover;
+                height: 600px;
             }
             .eventInfo{
                 position: absolute;
                 bottom: 0;
+                margin-bottom: 2rem;
                 .infoLeft{
-                    padding-left: 5rem;
+                    padding: 0;
                     text-align: left;
                     color: white;
                 }

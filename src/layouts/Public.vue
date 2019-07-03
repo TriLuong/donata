@@ -81,7 +81,7 @@ export default {
         height: 100vh;
         min-height: 600px;
         .publicLeft {
-            padding-right: 15rem;
+            padding-right: 5rem;
             text-align: left;
             position: relative;
             p:first-child {

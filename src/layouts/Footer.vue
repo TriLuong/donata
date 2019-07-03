@@ -25,10 +25,10 @@
                     </div>
                 </div>
                 <div class="row footerBottomContact">
-                    <div class="col-md-6 logo">
+                    <div class="col-md-4 logo">
                         <a href="#"><img src="../assets/logo.svg"/></a>
                     </div>
-                    <div class="col-md-6 info">
+                    <div class="col-md-8 info">
                         <div class="row">
                             <ul class="col-md-4">
                                 <h6>Contact</h6>
@@ -100,8 +100,8 @@ export default {
                 right: 0;
                 img {
                     object-fit: cover;
-                    width:300px;
-                    height:300px;
+                    width:250px;
+                    height:250px;
                 }
                 div:first-child {
                     text-align: left;
@@ -117,7 +117,7 @@ export default {
                 .logo {
                     text-align: left;
                     img {
-                        width: 30%;
+                        width: 50%;
                     }
                 }
                 .info {
@@ -126,6 +126,8 @@ export default {
                     font-size: 14px;
                     ul {
                         list-style-type: none;
+                        padding:0;
+                        padding-left: 10px;
                         h6{
                             text-transform: uppercase;
                             font-weight: bold;
