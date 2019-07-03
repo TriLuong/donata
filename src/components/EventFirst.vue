@@ -38,6 +38,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .event{
+        height: 100vh;
         padding: 0 !important;
         .left{
             padding: 0;
@@ -95,5 +96,57 @@ export default {
         }
     }
     
+    @media screen and (max-width: 375px) {
+        .event{
+            background-color: black;
+            padding:  1rem 2rem 2rem !important;
+            .left{
+                h1{
+                    transform: none;
+                    font-size: 72px;
+                }
+            }
+            .right{
+                img {
+                    object-fit: cover;
+                    height: 520px;
+                }
+                 .eventInfo{
+                    top: 10rem;
+                    padding: 0;
+                    .infoLeft{
+                        padding-left: 1rem;
+                    }
+                    .infoRight{
+                        padding: 0;
+                        .changePage{
+                            position: absolute;
+                            top: 40px;
+                            left:0;
+                            right: 0;
+                            a{
+                                display: inline;
+                                display: inline-block;
+                                padding:20px 60px;
+                                background-color: gray;
+                                border: 1px solid gray;
+                                border-radius: 10px;
+                                margin: 5px;
+                            }
+                        }
+                        .eventDetail{
+                            text-align: left;
+                            padding-left: 1rem;
+                            a{
+                                position: static;
+                            }
+                            
+                        }
+                    }
+                 }
+            }
+        }
+        
+    }
 </style>
 

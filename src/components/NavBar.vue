@@ -73,5 +73,19 @@ export default {
             }
         }
     }
+
+    @media screen and (max-width: 375px){
+           .navbar{
+               .navbar-brand{
+                   text-align: left;
+                   img {
+                       width: 30%;
+                   }
+               }
+               ul {
+                   display: none;
+               }
+           }
+    }
   
 </style>

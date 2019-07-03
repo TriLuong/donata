@@ -64,9 +64,29 @@ export default {
                 font-stretch: normal;
                 line-height: 1.5;
                 letter-spacing: 1px;
+                cursor: pointer;
                 color:black;
                 &:hover {
                     color: red;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 375px) {
+        .homePage {
+            .bgHomePage{
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+            .slogan{
+                h1 {
+                    color: white;
+                    width: 50%;
+                    margin:0 auto;
+                    margin-bottom: 1rem;
                 }
             }
         }
