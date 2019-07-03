@@ -17,10 +17,11 @@
                                 <p>{{this.items[count].time}}</p>
                             </div>
                         </div>
-                        <div class="col-md-4 publicRightCarousel" v-on:click="nextContent">
+                        <div class="col-md-4 publicRightCarousel">
                             <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[nextCount].url)"/>
                             <div class="changePage">
-                                <a>&gt;</a>
+                                <a class="previous" v-on:click="nextContent(-1)">&lt;</a>
+                                <a class="next" v-on:click="nextContent(1)">&gt;</a>
                             </div>
                         </div> 
                     </div>
@@ -60,16 +61,24 @@ export default {
         }
     },
     methods: {
-        nextContent: function() {
-            this.count +=1;
-            this.nextCount += 1;
-            console.log("Publication count",this.count);
+        nextContent: function(indeX) {
+            console.log(typeof(indeX));
+            this.count += parseInt(indeX);
+            this.nextCount += parseInt(indeX);
+ 
+            console.log("Publication count", this.count);
             if(this.count > this.items.length - 1){
                 this.count = 0;
+            }
+            else if (this.count < 0) {
+                this.count = this.items.length - 1;
             }
             if(this.nextCount > this.items.length - 1){
                 this.nextCount = 0;
             }
+            else if(this.nextCount < 0) {
+                this.nextCount = this.items.length - 1;
+            } 
         }
     }
 }
@@ -154,6 +163,9 @@ export default {
                         background-color: black;
                         opacity: 0.6;
                     }
+                    & > a.previous {
+                        display: none;
+                    }
                     & > a {
                         font-size: 50px;
                         text-decoration: none;
@@ -185,25 +197,38 @@ export default {
                     width: 100%;
                     position: static;
                     object-fit: cover;
-                    max-height: 300px;
-                    min-height: 300px;
+                    max-height: 270px;
+                    min-height: 270px;
                 }
                 .publicRightContent{
                     padding: 0;
                 }
                 .publicRightCarousel {
-                    
+                    margin-top: 10px;
                     & > img{
                         display: none;
                         position: static;
                     }
                     & > .changePage {
+                        position: static;
                         & > a {
                             position: static;
-                            display: inline-block;
-                            padding: 10px 20px;
+                            display: inline-block !important;
+                            padding: 1px 60px;
                             border: 1px solid gray;
+                            background-color: gray;
                             border-radius: 5px;
+                            transform: translateY(0);
+                        }
+                        & > a:first-child {
+                            margin-right: 4px;
+                        }
+                        & > a:last-child {
+                            margin-left: 4px;
+                        }
+                        & > a:hover {
+                            border-radius: 5px;
+                            background-color: none;
                         }
                     }
                 }
