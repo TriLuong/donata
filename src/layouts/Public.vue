@@ -140,6 +140,7 @@ export default {
                 padding: 0;
                 img{
                     position: relative;
+                    object-fit: cover;
                 }   
                 
                 & > .changePage {
