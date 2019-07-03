@@ -71,5 +71,27 @@ export default {
             }
         }
     }
+
+    @media screen and (max-width: 375px) {
+        .collectionElemt{
+            .bgColl{
+                img {
+                    object-fit: cover;
+                }
+            }
+            .infoColl {
+                .infoCollLeft {
+                    padding-left: 2rem;
+                }
+                .infoCollRight {
+                    .eventDetail{
+                        position: static;
+                        text-align: left;
+                        padding-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
 </style>
 
