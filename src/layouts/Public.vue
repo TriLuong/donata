@@ -4,24 +4,26 @@
             <div class="col-md-6 publicLeft">
                 <p>Collection</p>
                 <h1>LATEST PUBLICATIONS</h1>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>Sed vulputate lorem ut bibendum elementum. Phasellus placerat elit arcu, at imperdiet augue ullamcorper id. Maecenas malesuada leo libero. </p>
                 <a href="#">VIEW ALL ARTICLES &rarr;</a>
             </div>
             <div class="col-md-6 publicRight">
-                <div class="row">
-                    <div class="col-md-8 publicRightContent">
-                        <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
-                        <div class="publicRightTitle">
-                            <p>{{this.items[count].content}}</p>
-                            <p>{{this.items[count].time}}</p>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-8 publicRightContent">
+                            <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
+                            <div class="publicRightTitle">
+                                <p>{{this.items[count].content}}</p>
+                                <p>{{this.items[count].time}}</p>
+                            </div>
                         </div>
+                        <div class="col-md-4 publicRightCarousel" v-on:click="nextContent">
+                            <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[nextCount].url)"/>
+                            <div class="changePage">
+                                <a>&gt;</a>
+                            </div>
+                        </div> 
                     </div>
-                    <div class="col-md-4 publicRightCarousel" v-on:click="nextContent">
-                        <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[nextCount].url)"/>
-                        <div class="changePage">
-                            <a>&gt;</a>
-                        </div>
-                    </div> 
                 </div>
             </div>
         </div>
@@ -39,7 +41,7 @@ export default {
                 {
                     id: 1,
                     url: "Donata_13Mar197829.jpg",
-                    content: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    content: "Cras ullamcorper gravida mi sit amet pellen tesque. Sed non purus nullan teger commodo ac.",
                     time: "June 20th 2019",
                 },
                 {
@@ -104,6 +106,9 @@ export default {
         .publicRight {
             padding:0;
             padding-left: 2rem;
+            & > div {
+                padding: 0;
+            }
             img {
                 width: 100%;
                 height: 100vh;
@@ -137,7 +142,7 @@ export default {
                     position: relative;
                 }   
                 
-                .changePage {
+                & > .changePage {
                     position: absolute;
                     top:0;
                     bottom:0;
@@ -148,12 +153,57 @@ export default {
                         background-color: black;
                         opacity: 0.6;
                     }
-                    a {
+                    & > a {
                         font-size: 50px;
                         text-decoration: none;
                         color: white;
                         position: absolute;
                         transform: translateY(10rem);
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 375px) {
+        .publication {
+            padding: 2rem;
+            height: 100vh;
+            .publicLeft {
+                padding: 0;
+                p{
+                    font-size: 14px;
+                }
+                a {
+                    position: static;
+                }
+            }
+            .publicRight {
+                padding: 0;
+                margin-top: 1rem ;
+                img {
+                    width: 100%;
+                    position: static;
+                    object-fit: cover;
+                    max-height: 300px;
+                    min-height: 300px;
+                }
+                .publicRightContent{
+                    padding: 0;
+                }
+                .publicRightCarousel {
+                    
+                    & > img{
+                        display: none;
+                        position: static;
+                    }
+                    & > .changePage {
+                        & > a {
+                            position: static;
+                            display: inline-block;
+                            padding: 10px 20px;
+                            border: 1px solid gray;
+                            border-radius: 5px;
+                        }
                     }
                 }
             }

@@ -24,6 +24,8 @@ export default {
     .homePage {
         padding: 0 !important;
         position: relative;
+        height: 100vh;
+        min-height: 600px;
         .bgHomePage{
             img {
                 object-fit: fill;

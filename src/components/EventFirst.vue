@@ -40,6 +40,7 @@ export default {
     .event{
         height: 100vh;
         padding: 0 !important;
+        min-height: 600px;
         .left{
             padding: 0;
             background-color: black;
