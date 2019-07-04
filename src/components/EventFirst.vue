@@ -102,6 +102,7 @@ export default {
         .event{
             background-color: black;
             padding:  1rem 2rem 2rem !important;
+            height: 100vh;
             .left{
                 h1{
                     transform: none;

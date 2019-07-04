@@ -149,7 +149,6 @@ export default {
         .footerBottom {
             margin: 0 30px !important;
             .footerBottomContact{
-                border-bottom: 1px solid gainsboro;
                 padding-bottom: 5rem;
                 margin-top:12rem !important;
                 .logo {
@@ -179,6 +178,7 @@ export default {
                 line-height: 3rem;
                 font-family: "Lato";
                 font-size: 14px;
+                border-top: 1px solid gainsboro;
                 .left {
                     padding:0;
                     text-align: left !important;
@@ -245,12 +245,15 @@ export default {
                     margin-top: 3rem !important;
                     .logo {
                         text-align: center;
+                        padding-bottom: 3rem;
                     }
                     .info {
                         text-align: center;
                     }
                 }
                 .footerBottomCopyright{
+                    margin-top: 5rem !important;
+                    border-top: 1px solid gainsboro;
                     div {
                         width: 50%;
                     }
