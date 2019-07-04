@@ -76,15 +76,15 @@ export default {
             items: [
                 {
                     id: 1,
-                    url: "Donata_13Mar197829.jpg",
+                    url: "Donata_13Mar197775.jpg",
                 },
                 {
                     id: 2,
-                    url: "Donata_13Mar197766.jpg",
+                    url: "Donata_13Mar197838.jpg",
                 },
                 {
                     id: 3,
-                    url: "Donata_13Mar197789.jpg",
+                    url: "Donata_13Mar197791.jpg",
                 },
             ],
         }
@@ -234,6 +234,25 @@ export default {
                         &.previous {
                             margin-right: 5px;
                         }
+                    }
+                }
+            }
+
+            .footerBottom{
+                height: 100vh;
+                min-height: 600px;
+                .footerBottomContact{
+                    margin-top: 3rem !important;
+                    .logo {
+                        text-align: center;
+                    }
+                    .info {
+                        text-align: center;
+                    }
+                }
+                .footerBottomCopyright{
+                    div {
+                        width: 50%;
                     }
                 }
             }
