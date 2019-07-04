@@ -49,7 +49,7 @@ export default {
             flex: 50%;
             margin: 0 !important;
             img {
-                width: 18%;
+                width: 40%;
             }
         }
         ul{
