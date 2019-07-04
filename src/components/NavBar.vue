@@ -2,7 +2,7 @@
     <div class="container navBar">
         <nav class="navbar navbar-expand-sm">
             <!-- Links -->
-            <ul class="navbar-nav">
+            <ul id="menuLeft" class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">NEW</a>
                 </li>
@@ -20,7 +20,7 @@
             </a>
         
             <!-- Links -->
-            <ul class="navbar-nav">
+            <ul id="menuRight" class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="#">BEDROOM</a>
                 </li>
@@ -31,13 +31,37 @@
                     <a class="nav-link" href="#">BAR</a>
                 </li>
             </ul>
+            <a class="openMenu" v-on:click="openNav">&#9776;</a>
         </nav>
     </div>
 </template>
 
 <script>
 export default {
-    name: "NavBar"
+    name: "NavBar",
+    data() {
+        return {
+            showMenu: false, 
+        }
+    },
+    methods: {
+        openNav: function(){
+            console.log("showMenu", this.showMenu);
+            var menuLeft = document.getElementById("menuLeft");
+            var menuRight = document.getElementById("menuRight");
+            var iconShowMenu = document.getElementsByClassName("openMenu")[0];
+            if (!this.showMenu) {
+                menuLeft.style.display="flex";
+                menuRight.style.display="flex";
+                iconShowMenu.innerHTML = "&times;"
+            } else {
+                menuLeft.style.display="";
+                menuRight.style.display="";
+                iconShowMenu.innerHTML = "&#9776;"
+            }
+            this.showMenu = !this.showMenu;
+        }
+    },
 }
 </script>
 
@@ -53,7 +77,7 @@ export default {
             }
         }
         ul{
-            align-content: flex-end;
+            display: flex;
             li{
                 &:hover {
                     a{
@@ -72,10 +96,14 @@ export default {
                 }
             }
         }
+        .openMenu {
+            display: none;
+        }
     }
 
     @media screen and (max-width: 375px){
            .navbar{
+               position: relative;
                .navbar-brand{
                    text-align: left;
                    img {
@@ -84,7 +112,33 @@ export default {
                }
                ul {
                    display: none;
+                   position: absolute;
+                   top: 60px !important;
+                   background-color: black;
+                   opacity: 0.6;
+                   width: 50%;
+                   &#menuRight {
+                       right: 0 !important;
+                   }
+                   &#menuLeft {
+                       left: 0 !important;
+                   }
+                   li {
+                       padding: 0 10px;
+                       a{
+                            color: white;
+                       }
+                   }
+
                }
+                .openMenu {
+                    display: block;
+                    color: black;
+                    cursor: pointer;
+                    &:hover {
+                        color: red;
+                    }
+                }
            }
     }
   
