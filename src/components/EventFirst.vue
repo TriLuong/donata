@@ -127,7 +127,6 @@ export default {
                             left:0;
                             right: 0;
                             a{
-                                display: inline;
                                 display: inline-block;
                                 padding:20px 60px;
                                 background-color: gray;

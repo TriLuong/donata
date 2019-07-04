@@ -8,16 +8,15 @@
                 <p>Sed vulputate lorem ut bibendum elementum. Phasellus placerat elit arcu, at imperdiet augue ullamcorper id. Maecenas malesuada leo libero. </p>
             </div>
            
-            <div class="row footerImg">
+            <div class="footerImg">
                 <div class="col-md-4">
-                    <img src="../assets/02-Lifestyle-photos/Donata_13Mar197766.jpg"/>
+                    <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
                 </div>
-                <div class="col-md-4">
-                    <img src="../assets/02-Lifestyle-photos/Donata_13Mar197838.jpg"/>
-                </div>
-                <div class="col-md-4">
-                    <img src="../assets/02-Lifestyle-photos/Donata_13Mar197791.jpg"/>
-                </div>
+            </div>
+
+            <div class="changePage">
+                <a class="previous" v-on:click="nextContent(-1)">&lt;</a>
+                <a class="next" v-on:click="nextContent(1)">&gt;</a>
             </div>
         </div>
 
@@ -71,6 +70,39 @@
 <script async>
 export default {
     name:"Footer",
+    data() {
+        return {
+            count: 0,
+            items: [
+                {
+                    id: 1,
+                    url: "Donata_13Mar197829.jpg",
+                },
+                {
+                    id: 2,
+                    url: "Donata_13Mar197766.jpg",
+                },
+                {
+                    id: 3,
+                    url: "Donata_13Mar197789.jpg",
+                },
+            ],
+        }
+    },
+    methods: {
+        nextContent: function(indeX) {
+            console.log(typeof(indeX));
+            this.count += parseInt(indeX);
+ 
+            console.log("Publication count", this.count);
+            if(this.count > this.items.length - 1){
+                this.count = 0;
+            }
+            else if (this.count < 0) {
+                this.count = this.items.length - 1;
+            }
+        }
+    }
 }
 </script>
 
@@ -108,6 +140,9 @@ export default {
                 div:last-child {
                     text-align: right;
                 }
+            }
+            .changePage{
+                display: none;
             }
         }
         
@@ -160,6 +195,50 @@ export default {
             }
             
         }
+    }
+
+    @media screen and (max-width: 375px) {
+        footer {
+            .footerTop {
+                height: 100vh;
+                min-height: 600px;
+                padding: 2rem 2rem;
+                h1 {
+                    font-size: 30px;
+                }
+                p{
+                    padding: 0 !important;
+                }
+                .footerImg{
+                    position: static;
+                    margin-top: 40px;
+                    img {
+                        width: 100%;
+                    }
+                }
+                .changePage {
+                    display: block;
+                    font-size: 40px;
+                    width: 100%;
+                    padding: 0 15px;
+                     a{
+                        display: inline-block;
+                        padding:15px 55px;
+                        background-color: gray;
+                        border: 1px solid gray;
+                        border-radius: 10px;
+                        margin-top: 5px 0;
+                        &.next {
+                            margin-left: 5px;
+                        }
+                        &.previous {
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 </style>
 
