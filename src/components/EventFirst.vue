@@ -95,6 +95,7 @@ export default {
                             text-decoration: none;
                             font-family: "Lato";
                             color: white;
+                            font-weight: bold;
                             &:hover{
                                 color:red;
                             }
