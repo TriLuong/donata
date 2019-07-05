@@ -88,6 +88,9 @@ export default {
                 img {
                     object-fit: cover;
                 }
+                .blurColor {
+                    height: 70vh;
+                }
             }
             .infoColl {
                 .infoCollLeft {
