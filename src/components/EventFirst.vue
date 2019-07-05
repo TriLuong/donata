@@ -56,7 +56,8 @@ export default {
             img {
                 width: 100%;
                 object-fit: cover;
-                height: 600px;
+                height: 100vh;
+                min-height: 600px;
             }
             .eventInfo{
                 position: absolute;
