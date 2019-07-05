@@ -119,6 +119,7 @@ export default {
                  .eventInfo{
                     top: 10rem;
                     padding: 0;
+                    margin: 0;
                     .infoLeft{
                         padding-left: 1rem;
                     }
