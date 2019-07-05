@@ -113,11 +113,11 @@ export default {
             .right{
                 img {
                     object-fit: cover;
-                    height: 505px;
-                    min-height: 500px;
+                    height: 495px;
+                    min-height: 490px;
                 }
                  .eventInfo{
-                    top: 10rem;
+                    top: 8rem;
                     padding: 0;
                     margin: 0;
                     .infoLeft{
