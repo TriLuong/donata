@@ -74,8 +74,14 @@ export default {
                             text-decoration: none;
                             color: white;
                             font-size: 40px;
+                            display: inline-block;
+                            padding: 0 10px;
+                            line-height: 40px;
                             &:hover{
-                                color:red;
+                                background-color: gainsboro;
+                                color: black;
+                                opacity: 0.6;
+                                border-radius: 10px;
                             }
                         }
                     }
@@ -140,6 +146,7 @@ export default {
                                 &:hover {
                                     color: white;
                                     background-color: rgb(85, 84, 84);
+                                    opacity: 1;
                                 }
                             }
                         }
