@@ -54,7 +54,7 @@ export default {
                 {
                     id: 3,
                     url: "Donata_13Mar197789.jpg",
-                    content: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    content: "Cras ullamcorper gravida mi sit amet pellen tesque.",
                     time: "September 20th 2019",
                 },
             ],
@@ -197,8 +197,8 @@ export default {
                     width: 100%;
                     position: static;
                     object-fit: cover;
-                    max-height: 270px;
-                    min-height: 270px;
+                    max-height: 230px;
+                    min-height: 230px;
                 }
                 .publicRightContent{
                     padding: 0;
