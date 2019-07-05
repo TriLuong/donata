@@ -113,8 +113,8 @@ export default {
             .right{
                 img {
                     object-fit: cover;
-                    height: 525px;
-                    min-height: 520px;
+                    height: 505px;
+                    min-height: 500px;
                 }
                  .eventInfo{
                     top: 10rem;
@@ -132,7 +132,7 @@ export default {
                             right: 0;
                             a{
                                 display: inline-block;
-                                padding:20px 60px;
+                                padding:10px 55px;
                                 background-color: gray;
                                 border: 1px solid gray;
                                 border-radius: 10px;
