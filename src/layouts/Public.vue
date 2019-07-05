@@ -147,31 +147,32 @@ export default {
             .publicRightCarousel {
                 color: white;
                 padding: 0;
+                position: relative;
                 img{
                     position: relative;
                     object-fit: cover;
                 }   
                 
                 & > .changePage {
-                    position: absolute;
-                    top:0;
-                    bottom:0;
-                    left:0;
-                    right: 0;
-                    cursor: pointer;
-                    &:hover{
-                        background-color: black;
-                        opacity: 0.6;
-                    }
                     & > a.previous {
                         display: none;
                     }
                     & > a {
+                        cursor: pointer;
                         font-size: 50px;
                         text-decoration: none;
                         color: white;
                         position: absolute;
-                        transform: translateY(10rem);
+                        top:0;
+                        bottom:0;
+                        left:0;
+                        right:0;
+                        padding-top: 10rem;
+                        background-color: black;
+                        opacity: 0.5;
+                        &:hover {
+                            opacity: 0.7;
+                        }
                     }
                 }
             }

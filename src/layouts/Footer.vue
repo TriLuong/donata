@@ -251,11 +251,15 @@ export default {
                         border: 1px solid gray;
                         border-radius: 10px;
                         margin-top: 5px 0;
+                        cursor: pointer;
                         &.next {
                             margin-left: 5px;
                         }
                         &.previous {
                             margin-right: 5px;
+                        }
+                        &:hover {
+                            opacity: 0.6;
                         }
                     }
                 }

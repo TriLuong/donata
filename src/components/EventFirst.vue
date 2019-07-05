@@ -137,6 +137,10 @@ export default {
                                 border: 1px solid gray;
                                 border-radius: 10px;
                                 margin: 5px;
+                                &:hover {
+                                    color: white;
+                                    background-color: rgb(85, 84, 84);
+                                }
                             }
                         }
                         .eventDetail{
