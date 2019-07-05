@@ -26,29 +26,31 @@
         
 
         <div class="row footerBottom">
-            <div class="row footerBottomContact">
-                <div class="col-md-4 logo">
-                    <a href="#"><img src="../assets/logo.svg"/></a>
-                </div>
-                <div class="col-md-8 info">
-                    <div class="row">
-                        <ul class="col-md-4">
-                            <h6>Contact</h6>
-                            <li>+84 937 991 235</li>
-                            <li>malene@donata-inc.com</li>
-                            <li>www.donata-inc.com</li>
-                        </ul>
-                        <ul class="col-md-4">
-                            <h6>Address</h6>
-                            <li>198C1 Nguyen Van Huong, Thao Dien, District 2, Ho Chi Minh City</li>
-                        </ul>
-                        <ul class="col-md-4">
-                            <h6>working time</h6>
-                            <li>Monday to Friday
-                            (9AM to 5PM). By appointment only.</li>
-                            <li>Please call our office to make an appointment</li>
+            <div class="container-fluid">
+                <div class="row footerBottomContact">
+                    <div class="col-md-4 logo">
+                        <a href="#"><img src="../assets/logo.svg"/></a>
+                    </div>
+                    <div class="col-md-8 info">
+                        <div class="row">
+                            <ul class="col-md-4">
+                                <h6>Contact</h6>
+                                <li>+84 937 991 235</li>
+                                <li>malene@donata-inc.com</li>
+                                <li>www.donata-inc.com</li>
+                            </ul>
+                            <ul class="col-md-4">
+                                <h6>Address</h6>
+                                <li>198C1 Nguyen Van Huong, Thao Dien, District 2, Ho Chi Minh City</li>
+                            </ul>
+                            <ul class="col-md-4">
+                                <h6>working time</h6>
+                                <li>Monday to Friday
+                                (9AM to 5PM). By appointment only.</li>
+                                <li>Please call our office to make an appointment</li>
 
-                        </ul>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
