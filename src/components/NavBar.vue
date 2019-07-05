@@ -103,7 +103,7 @@ export default {
         }
     }
 
-    @media screen and (max-width: 375px){
+    @media screen and (max-width: 414px){
            .navbar{
                position: relative;
                .navbar-brand{

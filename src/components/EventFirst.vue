@@ -121,7 +121,7 @@ export default {
         }
     }
     
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 414px) {
         .event{
             background-color: black;
             padding:  1rem 2rem 2rem !important;
