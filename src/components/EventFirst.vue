@@ -106,8 +106,13 @@ export default {
                             font-family: "Lato";
                             color: white;
                             font-weight: bold;
+                            width: 70%;
+                            padding: 10px;
+                            margin: auto;
                             &:hover{
-                                color:red;
+                                background-color: gainsboro;
+                                color: black;
+                                border-radius: 10px;
                             }
                         }
                     }

@@ -63,15 +63,18 @@ export default {
                 text-transform: uppercase;
                 text-decoration: none;
                 font-size: 16px;
-                font-weight: 900;
+                font-weight: bold;
                 font-style: normal;
                 font-stretch: normal;
                 line-height: 1.5;
                 letter-spacing: 1px;
                 cursor: pointer;
                 color:white;
+                padding:10px;
                 &:hover {
-                    color: red;
+                    background-color: gainsboro;
+                    color: black;
+                    border-radius: 10px;
                 }
             }
         }

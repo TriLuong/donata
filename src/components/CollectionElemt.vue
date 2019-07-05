@@ -63,10 +63,6 @@ export default {
             }
             .infoCollRight {
                 position: relative;
-                a{
-                    color: white;
-                    text-decoration: none;
-                }
                 .eventDetail{
                     position: absolute;
                     font-family: "Lato";
@@ -74,9 +70,17 @@ export default {
                     bottom:1rem;
                     left:0;
                     right:0;
-                    a:hover {
-                        color:red;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px;
+                        &:hover {
+                            background-color: gainsboro;
+                            color: black;
+                            border-radius: 10px;
+                        }
                     }
+                    
                 }
             }
         }

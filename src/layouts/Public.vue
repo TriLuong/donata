@@ -108,8 +108,11 @@ export default {
                 color: black;
                 font-weight: bold;
                 bottom: 0;
+                padding: 10px;
                 &:hover {
-                    color: red;
+                    background-color: gray;
+                    color: white;
+                    border-radius: 10px;
                 }
             }
         }
@@ -245,7 +248,7 @@ export default {
                         }
                         & > a:hover {
                             border-radius: 5px;
-                            background-color: none;
+                            color: black;
                         }
                     }
                 }

@@ -81,7 +81,8 @@ export default {
             li{
                 &:hover {
                     a{
-                        color: red;
+                        color: white;
+                        background-color: gray;
                     }
                 }
                 a{
@@ -93,6 +94,7 @@ export default {
                     line-height: 1.33;
                     letter-spacing: 2px;
                     color: black;
+                    padding: 5px;
                 }
             }
         }
@@ -114,9 +116,9 @@ export default {
                    display: none;
                    position: absolute;
                    top: 60px !important;
-                   background-color: black;
-                   opacity: 0.6;
+                   background-color: gainsboro;
                    width: 50%;
+                   opacity: 0.8;
                    &#menuRight {
                        right: 0 !important;
                    }
@@ -125,9 +127,15 @@ export default {
                    }
                    li {
                        padding: 0 10px;
-                       a{
-                            color: white;
-                       }
+                        &:hover {
+                            a{
+                                color: white;
+                                background-color: gray;
+                            }
+                        }
+                        a{
+                                color: black;
+                        }
                    }
 
                }
@@ -135,8 +143,11 @@ export default {
                     display: block;
                     color: black;
                     cursor: pointer;
+                    padding: 10px;
                     &:hover {
-                        color: red;
+                        background-color: gainsboro;
+                        color: black;
+                        border-radius: 10px 0;
                     }
                 }
            }
