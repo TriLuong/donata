@@ -135,6 +135,7 @@ export default {
             .containerFooterImg {
                 position: relative;
                 .footerImg{
+                    width: 100%;
                     position: absolute;
                     top: 0;
                     img {
