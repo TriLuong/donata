@@ -4,10 +4,13 @@
             <img src="../assets/02-Lifestyle-photos/Donata_13Mar197798.jpg"/>
         </div>
         <NavBar />
+        <div class="blurColor" />
+
         <div class="slogan">
             <h1>LIFESTYLE WITHOUT BORDERS</h1>
             <a href="#">GET IN TOUCH &rarr;</a>
         </div>
+        
     </div>
 </template>
 
@@ -53,9 +56,8 @@ export default {
                 font-style: normal;
                 font-stretch: normal;
                 line-height: 1.2;
-                letter-spacing: -1px;
                 text-align: center;
-                color: black;
+                color: white;
             }
             a{
                 text-transform: uppercase;
@@ -67,11 +69,20 @@ export default {
                 line-height: 1.5;
                 letter-spacing: 1px;
                 cursor: pointer;
-                color:black;
+                color:white;
                 &:hover {
                     color: red;
                 }
             }
+        }
+        .blurColor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: linear-gradient(transparent, black);
+            height: 50vh;
+            min-height: 300px;
         }
     }
 

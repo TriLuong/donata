@@ -8,6 +8,7 @@
                 <img src="../assets/02-Lifestyle-photos/Donata_13Mar197750.jpg"/>
                 <div class="container-fluid eventInfo">
                     <div class="row">
+                        <div class="blurColor" />
                         <div class="col-md-7 infoLeft">
                             <h1>DONATA ATVIFA 2019</h1>
                             <p>March 6-7th 2019</p>
@@ -15,8 +16,8 @@
                         </div>
                         <div class="col-md-5 infoRight">
                             <div class="changePage">
-                                <a href="#">&lt;</a>
-                                <a href="#">&gt;</a>
+                                <a>&lt;</a>
+                                <a>&gt;</a>
                             </div>
                             <div class="eventDetail">
                                 <a href="#">EVENT DETAILS &rarr;</a>
@@ -62,7 +63,15 @@ export default {
             .eventInfo{
                 position: absolute;
                 bottom: 0;
-                margin-bottom: 2rem;
+                .blurColor {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-image: linear-gradient(transparent, black);
+                    height: 50vh;
+                    min-height: 300px;
+                }
                 .infoLeft{
                     padding: 0;
                     text-align: left;
@@ -77,6 +86,7 @@ export default {
                             display: inline-block;
                             padding: 0 10px;
                             line-height: 40px;
+                            cursor: pointer;
                             &:hover{
                                 background-color: gainsboro;
                                 color: black;

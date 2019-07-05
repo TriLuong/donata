@@ -2,6 +2,7 @@
     <div class="container-fluid collectionElemt">
         <div class="row bgColl">
             <img v-bind:src="require('../assets/02-Lifestyle-photos/' + collection.url)" />
+            <div class="blurColor" />
         </div>
         <div class="row infoColl">
             <div class="col-md-7 col-xs-12 infoCollLeft">
@@ -39,7 +40,16 @@ export default {
                 min-height: 600px;
                 height: 100vh;
                 transform: scaleX(-1);
-            };
+            }
+            .blurColor {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-image: linear-gradient(transparent, black);
+                height: 50vh;
+                min-height: 300px;
+            }
         };
         .infoColl {
             color: white;

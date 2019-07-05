@@ -12,6 +12,7 @@
                     <div class="row">
                         <div class="col-md-8 publicRightContent">
                             <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
+                            <div class="blurColor" />
                             <div class="publicRightTitle">
                                 <p>{{this.items[count].content}}</p>
                                 <p>{{this.items[count].time}}</p>
@@ -125,10 +126,19 @@ export default {
                 min-height: 400px;
             }
             .publicRightContent{
-                padding:0 1rem;
+                padding:0;
                 img {
                     position: relative;
                     width: 100%;
+                }
+                .blurColor {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-image: linear-gradient(transparent, black);
+                    height: 50vh;
+                    min-height: 300px;
                 }
                 .publicRightTitle{
                     position: absolute;
@@ -147,6 +157,7 @@ export default {
             .publicRightCarousel {
                 color: white;
                 padding: 0;
+                padding-left: 10px;
                 position: relative;
                 img{
                     position: relative;
@@ -165,7 +176,7 @@ export default {
                         position: absolute;
                         top:0;
                         bottom:0;
-                        left:0;
+                        left:10px;
                         right:0;
                         padding-top: 10rem;
                         background-color: black;
@@ -203,9 +214,14 @@ export default {
                 }
                 .publicRightContent{
                     padding: 0;
+                    .blurColor {
+                        height: 30vh;
+                        min-height: 200px;
+                    }
                 }
                 .publicRightCarousel {
                     margin-top: 10px;
+                    padding:0;
                     & > img{
                         display: none;
                         position: static;
