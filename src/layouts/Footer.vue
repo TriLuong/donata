@@ -7,13 +7,14 @@
             <div class="col-md-6">
                 <p>Sed vulputate lorem ut bibendum elementum. Phasellus placerat elit arcu, at imperdiet augue ullamcorper id. Maecenas malesuada leo libero. </p>
             </div>
-           
-            <div class="row footerImg">
-                <div class="col-md-4 footerImgDefault" v-for="item in items" v-bind:key="item.id">
-                    <img v-bind:src="require('../assets/02-Lifestyle-photos/' + item.url)"/>
-                </div>
-                <div class="col-md-4 footerImgResponsive">
-                    <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
+            <div class="container-fluid containerFooterImg">    
+                <div class="row footerImg">
+                    <div class="col-md-4 footerImgDefault" v-for="item in items" v-bind:key="item.id">
+                        <img v-bind:src="require('../assets/02-Lifestyle-photos/' + item.url)"/>
+                    </div>
+                    <div class="col-md-4 footerImgResponsive">
+                        <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
+                    </div>
                 </div>
             </div>
 
@@ -131,24 +132,28 @@ export default {
             p:last-child{
                 padding-left: 30px;
             }
-            .footerImg{
-                position: absolute;
-                top: 190px;
-                img {
-                    object-fit: cover;
-                    width:250px;
-                    height:250px;
-                }
-                div:first-child {
-                    text-align: left;
-                }
-                div:last-child {
-                    text-align: right;
-                }
-                .footerImgResponsive{
-                    display: none;
+            .containerFooterImg {
+                position: relative;
+                .footerImg{
+                    position: absolute;
+                    top: 0;
+                    img {
+                        object-fit: cover;
+                        width:250px;
+                        height:250px;
+                    }
+                    div:first-child {
+                        text-align: left;
+                    }
+                    div:last-child {
+                        text-align: right;
+                    }
+                    .footerImgResponsive{
+                        display: none;
+                    }
                 }
             }
+            
             .changePage{
                 display: none;
             }
@@ -217,19 +222,22 @@ export default {
                 p{
                     padding: 0 !important;
                 }
-                .footerImg{
-                    position: static;
-                    margin-top: 40px;
-                    img {
-                        width: 100%;
-                    }
-                    .footerImgDefault{
-                        display: none;
-                    }
-                    .footerImgResponsive{
-                        display: block;
+                .containerFooterImg {
+                    .footerImg{
+                        position: static;
+                        margin-top: 40px;
+                        img {
+                            width: 100%;
+                        }
+                        .footerImgDefault{
+                            display: none;
+                        }
+                        .footerImgResponsive{
+                            display: block;
+                        }
                     }
                 }
+                
                 .changePage {
                     display: block;
                     font-size: 40px;
