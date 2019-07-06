@@ -107,5 +107,12 @@ export default {
             }
         }
     }
+
+    @media screen and (max-width: 736px) {
+        .homePage {
+            min-height: 350px;
+            overflow: hidden;
+        }
+    }
 </style>
 

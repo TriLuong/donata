@@ -101,6 +101,23 @@ export default {
             display: none;
         }
     }
+    @media screen and (max-width: 736px) {
+        .navbar{
+               .navbar-brand{
+                   margin: 0 10px !important;
+                   img {
+                       width: 100%;
+                   }
+               }
+               ul {
+                   li{
+                       a{
+                           font-size: 10px;
+                       }
+                   }
+               }
+        }
+    }
 
     @media screen and (max-width: 414px){
            .navbar{
@@ -151,5 +168,7 @@ export default {
                 }
            }
     }
+
+    
   
 </style>

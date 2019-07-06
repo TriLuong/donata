@@ -1,16 +1,16 @@
 <template>
     <div class="container-fluid publication">
         <div class="row">
-            <div class="col-md-6 publicLeft">
+            <div class="col-md-6 col-sm-6 publicLeft">
                 <p>Collection</p>
                 <h1>LATEST PUBLICATIONS</h1>
                 <p>Sed vulputate lorem ut bibendum elementum. Phasellus placerat elit arcu, at imperdiet augue ullamcorper id. Maecenas malesuada leo libero. </p>
                 <a href="#">VIEW ALL ARTICLES &rarr;</a>
             </div>
-            <div class="col-md-6 publicRight">
+            <div class="col-md-6 col-sm-6 publicRight">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-8 publicRightContent">
+                        <div class="col-md-8 col-sm-6 publicRightContent">
                             <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
                             <div class="blurColor" />
                             <div class="publicRightTitle">
@@ -18,7 +18,7 @@
                                 <p>{{this.items[count].time}}</p>
                             </div>
                         </div>
-                        <div class="col-md-4 publicRightCarousel">
+                        <div class="col-md-4 col-sm-6 publicRightCarousel">
                             <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[nextCount].url)"/>
                             <div class="changePage">
                                 <a class="previous" v-on:click="nextContent(-1)">&lt;</a>
@@ -191,12 +191,45 @@ export default {
             }
         }
     }
+    @media screen and (max-width: 736px) {
+        .publication {
+            padding: 2rem;
+            padding-right: 0;
+            height: 100vh;
+            min-height: 350px;
+            .publicLeft {
+                height: 85vh;
+            }
+            .publicRight {
+                height: 85vh;
+                overflow: hidden;
+                .publicRightContent{
+                    .blurColor {
+                        height: 95vh;
+                    }
+                    .publicRightTitle{
+                        top: 2rem;
+                    }
+                }
+                .publicRightCarousel {
+                     & > .changePage {
+                        & > a {
+                            padding-top:9rem;
+                        }
+                     }
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 414px) {
         .publication {
             padding: 2rem;
             height: 100vh;
+            min-height: 350px;
             .publicLeft {
                 padding: 0;
+                height: 35vh;
                 p{
                     font-size: 14px;
                 }

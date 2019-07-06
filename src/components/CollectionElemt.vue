@@ -86,11 +86,12 @@ export default {
         }
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 736px) {
         .collectionElemt{
             .bgColl{
                 img {
                     object-fit: cover;
+                    min-height: 350px;
                 }
                 .blurColor {
                     height: 70vh;

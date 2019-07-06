@@ -155,25 +155,27 @@ export default {
         }
     }
     
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 736px) {
         .event{
             background-color: black;
             padding:  1rem 2rem 2rem !important;
             height: 100vh;
+            min-height: 350px;
+            overflow: hidden;
             .left{
                 h1{
                     transform: none;
-                    font-size: 72px;
+                    font-size: 65px;
                 }
             }
             .right{
                 img {
                     object-fit: cover;
-                    height: 495px;
-                    min-height: 490px;
+                    height: 270px;
+                    min-height: 250px;
                 }
                  .eventInfo{
-                    top: 8rem;
+                    top: 1rem;
                     padding: 0;
                     margin: 0;
                     .infoLeft{
@@ -212,7 +214,23 @@ export default {
                  }
             }
         }
-        
+        @media screen and (max-width: 414px) {
+            .event{
+                .left{
+                    h1{
+                        font-size: 72px;
+                    }
+                }
+                .right{
+                    img {
+                        height: 495px;
+                    }
+                    .eventInfo{
+                        top: 8rem;
+                    }
+                }
+            }
+        }
     }
 </style>
 

@@ -229,7 +229,7 @@ export default {
         }
     }
 
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 736px) {
         footer {
             .footerTop {
                 height: 100vh;
