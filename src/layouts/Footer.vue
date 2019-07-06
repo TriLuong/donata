@@ -6,6 +6,12 @@
             </div>
             <div class="col-md-6">
                 <p>Sed vulputate lorem ut bibendum elementum. Phasellus placerat elit arcu, at imperdiet augue ullamcorper id. Maecenas malesuada leo libero. </p>
+                <div class="socialIcon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
             </div>
             <div class="container-fluid containerFooterImg">    
                 <div class="row footerImg">
@@ -97,10 +103,8 @@ export default {
     },
     methods: {
         nextContent: function(indeX) {
-            console.log(typeof(indeX));
-            this.count += parseInt(indeX);
+            this.count += indeX;
  
-            console.log("Publication count", this.count);
             if(this.count > this.items.length - 1){
                 this.count = 0;
             }
@@ -132,8 +136,22 @@ export default {
             p:last-child{
                 padding-left: 30px;
             }
+            .socialIcon {
+                text-align: left;
+                a {
+                    color: white;
+                    padding: 10px 15px;
+                    border: 1px solid white;
+                    margin-right: 10px;
+                    display: inline-block;
+                    &:hover {
+                        background-color: gray;
+                    }
+                }
+            }
             .containerFooterImg {
                 position: relative;
+                padding: 0;
                 .footerImg{
                     width: 100%;
                     position: absolute;
@@ -146,7 +164,7 @@ export default {
                     div:first-child {
                         text-align: left;
                     }
-                    div:last-child {
+                    div:nth-last-child(2) {
                         text-align: right;
                     }
                     .footerImgResponsive{

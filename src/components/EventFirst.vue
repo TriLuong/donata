@@ -11,8 +11,8 @@
                         <div class="blurColor" />
                         <div class="col-md-7 infoLeft">
                             <h1>DONATA ATVIFA 2019</h1>
-                            <p>March 6-7th 2019</p>
-                            <p>Secc 799 Nguyen Van Linh, Tan Phu, District 7, HCMC</p>
+                            <p><i class="fas fa-calendar-alt"></i> March 6-7th 2019</p>
+                            <p><i class="fas fa-map-marker-alt"></i> Secc 799 Nguyen Van Linh, Tan Phu, District 7, HCMC</p>
                         </div>
                         <div class="col-md-5 infoRight">
                             <div class="changePage">
@@ -76,6 +76,9 @@ export default {
                     padding: 0;
                     text-align: left;
                     color: white;
+                    i {
+                        padding-right: 10px;
+                    }
                 }
                 .infoRight{
                     .changePage{

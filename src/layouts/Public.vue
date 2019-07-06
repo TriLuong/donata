@@ -63,11 +63,9 @@ export default {
     },
     methods: {
         nextContent: function(indeX) {
-            console.log(typeof(indeX));
-            this.count += parseInt(indeX);
-            this.nextCount += parseInt(indeX);
+            this.count += indeX;
+            this.nextCount += indeX;
  
-            console.log("Publication count", this.count);
             if(this.count > this.items.length - 1){
                 this.count = 0;
             }

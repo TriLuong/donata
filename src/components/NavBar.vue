@@ -46,7 +46,6 @@ export default {
     },
     methods: {
         openNav: function(){
-            console.log("showMenu", this.showMenu);
             var menuLeft = document.getElementById("menuLeft");
             var menuRight = document.getElementById("menuRight");
             var iconShowMenu = document.getElementsByClassName("openMenu")[0];
