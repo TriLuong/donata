@@ -229,7 +229,7 @@ export default {
             min-height: 350px;
             .publicLeft {
                 padding: 0;
-                height: 35vh;
+                height: auto;
                 p{
                     font-size: 14px;
                 }
