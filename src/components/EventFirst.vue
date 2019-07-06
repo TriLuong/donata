@@ -5,7 +5,7 @@
                 <h1>EVENTS</h1>
             </div>
             <div class="col-md-9 right">
-                <img src="../assets/02-Lifestyle-photos/Donata_13Mar197750.jpg"/>
+                <img v-bind:src="require('../assets/02-Lifestyle-photos/' + this.items[count].url)"/>
                 <div class="container-fluid eventInfo">
                     <div class="row">
                         <div class="blurColor" />
@@ -16,8 +16,8 @@
                         </div>
                         <div class="col-md-5 infoRight">
                             <div class="changePage">
-                                <a>&lt;</a>
-                                <a>&gt;</a>
+                                <a class="previous" v-on:click="nextContent(-1)">&lt;</a>
+                                <a class="next" v-on:click="nextContent(1)">&gt;</a>
                             </div>
                             <div class="eventDetail">
                                 <a href="#">EVENT DETAILS &rarr;</a>
@@ -35,6 +35,37 @@
 <script>
 export default {
     name: "EventFirst",
+        data() {
+        return {
+            count: 0,
+            items: [
+                {
+                    id: 1,
+                    url: "Donata_13Mar197750.jpg",
+                },
+                {
+                    id: 2,
+                    url: "Donata_13Mar197740.jpg",
+                },
+                {
+                    id: 3,
+                    url: "Donata_13Mar197798.jpg",
+                },
+            ],
+        }
+    },
+    methods: {
+        nextContent: function(indeX) {
+            this.count += indeX;
+ 
+            if(this.count > this.items.length - 1){
+                this.count = 0;
+            }
+            else if (this.count < 0) {
+                this.count = this.items.length - 1;
+            }
+        }
+    }
 }
 </script>
 <style lang="scss" scoped>
