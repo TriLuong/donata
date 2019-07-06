@@ -100,7 +100,7 @@ export default {
                     left: 0;
                     right: 0;
                     background-image: linear-gradient(transparent, black);
-                    height: 50vh;
+                    height: 70vh;
                     min-height: 300px;
                 }
                 .infoLeft{
