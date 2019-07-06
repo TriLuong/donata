@@ -153,6 +153,7 @@ export default {
                 }
                 p:last-child {
                     text-transform: uppercase;
+                    color: gray;
                 }
             }
             .publicRightCarousel {

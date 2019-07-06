@@ -253,6 +253,7 @@ export default {
                         }
                         .footerImgResponsive{
                             display: block;
+                            margin-top:10px;
                         }
                     }
                 }
