@@ -207,6 +207,7 @@ export default {
                 }
             }
             .footerBottomCopyright{
+                position: static;
                 padding: 0;
                 line-height: 3rem;
                 font-family: "Lato";
@@ -230,21 +231,7 @@ export default {
         }
     }
 
-    /* Ipad - Ipad pro*/
-    @media screen and (max-width: 1366px) {
-        footer {
-            position: relative;
-            .footerBottom {
-                .footerBottomCopyright{
-                    position: absolute;
-                    left: 5rem;
-                    right: 5rem;
-                    bottom: 0;
-                }
-            }
-        }
-    }
-
+    /* Ipad*/
     @media screen and (max-width: 1024px) {
         footer {
             position: relative;
