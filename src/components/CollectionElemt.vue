@@ -74,10 +74,10 @@ export default {
                         color: white;
                         text-decoration: none;
                         padding: 10px;
+                        border-radius: 10px;
                         &:hover {
-                            background-color: gainsboro;
+                            background-color: gray;
                             color: black;
-                            border-radius: 10px;
                         }
                     }
                     
@@ -105,6 +105,10 @@ export default {
                         position: static;
                         text-align: left;
                         padding-left: 1rem;
+                        a{
+                            background-color: gainsboro;
+                            color: black;
+                        }
                     }
                 }
             }
