@@ -191,6 +191,18 @@ export default {
             }
         }
     }
+    @media screen and (max-width: 1366px) {
+        .publication {
+            .publicRight {
+                .publicRightContent{
+                    .blurColor {
+                        height: 30vh;
+                    }
+                }
+            }
+        }
+    }
+
     @media screen and (max-width: 736px) {
         .publication {
             padding: 2rem;

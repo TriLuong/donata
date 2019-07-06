@@ -129,6 +129,7 @@ export default {
             height: 300px;
             h1 {
                 text-transform: uppercase;
+                text-align: left;
             }
             p{
                 text-align: left;
@@ -229,8 +230,65 @@ export default {
         }
     }
 
+    /* Ipad - Ipad pro*/
+    @media screen and (max-width: 1366px) {
+        footer {
+            position: relative;
+            .footerBottom {
+                .footerBottomCopyright{
+                    position: absolute;
+                    left: 5rem;
+                    right: 5rem;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        footer {
+            position: relative;
+            overflow: hidden;
+
+            .footerTop {
+                height: 300px;
+            }
+            .footerBottom {                
+                .footerBottomCopyright{
+                    position: absolute;
+                    left: 5rem;
+                    right: 5rem;
+                    bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        footer {
+            .footerTop {
+                h1 {
+                    font-size: 2rem;
+                }
+                .containerFooterImg {
+                    .footerImg{
+                        .footerImgDefault{
+                            img {
+                                width: 210px;
+                                height: 210px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
+
+    /* Iphone 6/7 - Iphone 6/7 plus*/
     @media screen and (max-width: 736px) {
         footer {
+            overflow: unset;
             .footerTop {
                 height: 100vh;
                 min-height: 600px;
@@ -298,6 +356,7 @@ export default {
                     }
                 }
                 .footerBottomCopyright{
+                    position: static;
                     margin-top: 5rem !important;
                     border-top: 1px solid gainsboro;
                     div {
