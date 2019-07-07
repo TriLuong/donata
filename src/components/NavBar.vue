@@ -104,57 +104,39 @@ export default {
     @media screen and (max-width: 736px) {
         .navbar{
                .navbar-brand{
-                   margin: 0 10px !important;
-                   img {
-                       width: 100%;
-                   }
-               }
-               ul {
-                   li{
-                       a{
-                           font-size: 10px;
-                       }
-                   }
-               }
-        }
-    }
-
-    @media screen and (max-width: 414px){
-           .navbar{
-               position: relative;
-               .navbar-brand{
+                   position: relative;
                    text-align: left;
                    img {
                        width: 30%;
                    }
-               }
-               ul {
-                   display: none;
-                   position: absolute;
-                   top: 60px !important;
-                   background-color: gainsboro;
-                   width: 50%;
-                   opacity: 0.8;
-                   &#menuRight {
-                       right: 0 !important;
-                   }
-                   &#menuLeft {
-                       left: 0 !important;
-                   }
-                   li {
-                       padding: 0 10px;
-                        &:hover {
-                            a{
-                                color: white;
-                                background-color: gray;
+                }
+                ul {
+                    display: none;
+                    position: absolute;
+                    top: 65px;
+                    background-color: gainsboro;
+                    width: 50%;
+                    opacity: 0.8;
+                    &#menuRight {
+                        right: 0 ;
+                    }
+                    &#menuLeft {
+                        left: 0 ;
+                    }
+                    li {
+                        padding: 0 5px;
+                            &:hover {
+                                a{
+                                    color: white;
+                                    background-color: gray;
+                                }
                             }
-                        }
-                        a{
-                                color: black;
-                        }
-                   }
+                            a{
+                                    color: black;
+                            }
+                    }
 
-               }
+                }
                 .openMenu {
                     display: block;
                     color: black;
@@ -166,6 +148,20 @@ export default {
                         border-radius: 10px 0;
                     }
                 }
+           }
+        }
+    
+
+    @media screen and (max-width: 414px){
+           .navbar{
+               ul {
+                   top: 60px;
+                   background-color: gainsboro;
+                   li {
+                       padding: 0 10px;
+                   }
+
+               }
            }
     }
 
